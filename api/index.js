@@ -4,6 +4,10 @@ const axios = require('axios');
 
 const base_url = "https://jobs.github.com/positions.json"
 
+router.get('/', (req, res) => {
+  res.send("OK")
+})
+
 // Create User
 router.post('/getJobsPerPage', (req, res) => {
   let url = base_url + '?page=' + req.body.pageNumber
